@@ -1,0 +1,50 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class="mt-5 cover-full container justify-content-center h-100 p-5"
+        [ngClass]="{'bg-com':comActive,'bg-gui':articActive}">
+
+        <input type="text" [(ngModel)]="searchTerm"  aria-describedby="search-text" class="form-control row m-auto m-0 wid " placeholder="Search"
+            autofocus />
+
+        <div class="row">
+            <div class="col p-3">
+                <button type="button" class="w-100  border-0 " [ngClass]="{'actgui':articActive,'disgui':!articActive}"
+                    (click)="changeselection()">
+                    <h5>guide article</h5>
+                </button>
+            </div>
+            <div class="col p-3">
+                <button type="button" class="w-100  border-0 rounded-1 "
+                    [ngClass]="{'actcom':comActive,'discom':!comActive}" (click)="changeselection()">
+                    <h5>communication article</h5>
+                </button>
+            </div>
+        </div>
+        <div class="row position-relative" *ngIf="comActive ">
+            <div *ngFor="let artic of comArticles | term:searchTerm" class="col-12 col-md-6 col-lg-4 g-1">
+                <a routerLink="/Articles/{{artic.idArticle}}">
+                <div class="card">
+                    <img src="http://localhost:8080/articles/getImage/{{artic.idArticle}}" height="275" onerror="this.src='/assets/placeholder.jpg'" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{artic.title}}</h5>
+                        <p class="card-text">{{artic.text|cut:50}}</p>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+        <div class="row position-relative" *ngIf="articActive">
+            <div *ngFor="let artic of guiArticles | term:searchTerm " class="col-12 col-md-6 col-lg-4 g-1">
+                <a routerLink="/Articles/{{artic.idArticle}}">
+                <div class="card">
+                    <img src="http://localhost:8080/articles/getImage/{{artic.idArticle}}" height="275" onerror="this.src='/assets/placeholder.jpg'" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{artic.title}}</h5>
+                        <p class="card-text">{{artic.text|cut:50}}</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+
+    </div>
+</div>

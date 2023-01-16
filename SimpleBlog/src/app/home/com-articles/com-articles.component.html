@@ -1,0 +1,17 @@
+<div class=" pt-4 pb-4  flex">
+    <p class="display-6 ps-4  ">Check our guides if you need help:</p>    
+        <button class=" btn-right pe-3 btn border-0 text-black text-decoration-none">view more >> </button>
+    <div class="row p-5  ">
+        <div *ngFor="let artic of articles" class="col-12 col-md-6 col-lg-4 g-3">
+            <a [routerLink]="['/','Articles',artic.idArticle]">
+                <div class="card">
+                    <img src="http://localhost:8080/articles/getImage/{{artic.idArticle}}"  onerror="this.src='/assets/placeholder.jpg'" class="card-img-top" height="400" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{artic.title}}</h5>
+                        <p class="card-text">{{artic.text|cut:50}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

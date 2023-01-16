@@ -1,0 +1,41 @@
+<div class="hei ">
+    <app-navbar></app-navbar>
+    <form (ngSubmit)="submit()" class="pos textfont container justify-content-center align-items-center h-100">
+        <div class=" mt-3 mb-3 p-4" [ngClass]="{'bg-com':comActive,'bg-gui':articActive}">
+            <div>
+                <h4>Type of article : </h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="w-100  border-0 zpad" [ngClass]="{'act':articActive,'select':!articActive}"
+                    (click)="changeselection()">
+                        <h5>guide article</h5>
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" class="w-100 border-0 zpad " [ngClass]="{'act':comActive,'select':!comActive}"   
+                    (click)="changeselection()">
+                        <h5>communication article</h5>
+                    </button>
+                </div>
+            </div>
+            <div class="row ">
+                <label for="title" class="pt-2 pb-2 "><h4> Write a title for your article : </h4></label>
+                <input class="p-1 border-0 rounded-2 textspace" type="text" name="articleTitle" id="title" [(ngModel)]="title" required autofocus >
+            </div>
+            <div class="row pt-3 pb-3">
+                <span></span>
+                <label for="title" class="pt-2 pb-2"><h4> Write your article : </h4></label>
+                <textarea class="p-1 border-0 rounded-1 textspace" name="articlebody" id="text" cols="30" rows="30" [(ngModel)]="text" required ></textarea>
+            </div>
+            <div class="row pt-4 pb-3">
+                <label for="image"><h4> Choose an image for your Article</h4></label>
+                <input name="image" type="file" accept="image/*" #imageinput (change)="onFileChange(imageinput)" required>
+            </div>
+            <div class="text-center">
+                <button class="p-1 cust-btn rounded-3 border-0" type="submit">Create Article</button>
+            </div>
+        </div>
+        
+    </form>
+</div>

@@ -1,0 +1,64 @@
+textarea{
+    resize: none;
+}
+.btn{
+    background:linear-gradient(to bottom,rgba(168, 168, 168, 0.29),rgb(255, 255, 255,0.1));
+    position: relative;
+    font-size: larger;
+    transition-delay: 20ms;
+    transition: all;
+    transition-duration: 200ms;
+}
+.btncomment{
+    background:linear-gradient(to bottom,rgba(104, 104, 104, 0.29),rgb(255, 255, 255,0.1));
+    position: relative;
+    width: auto;
+    border: 0;
+    font-size: larger;
+    transition-delay: 20ms;
+    transition: all;
+    transition-duration: 200ms;
+}
+.btncomment:hover{
+    transition-delay: 20ms;
+    transition: all;
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    background:linear-gradient(to bottom,rgba(104, 104, 104, 0.29),rgb(255, 255, 255,0.5));
+    box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -webkit-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -moz-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+}
+.btn:hover{
+    transition-delay: 20ms;
+    transition: all;
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    background:linear-gradient(to bottom,rgba(168, 168, 168, 0.2),rgb(255, 255, 255,0.5));
+    box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -webkit-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -moz-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+}
+.rbtn{
+    background:linear-gradient(to bottom,rgba(187, 1, 1, 0.29),rgb(255, 255, 255,0.1));
+    position: relative;
+    font-size: larger;
+    transition-delay: 20ms;
+    transition: all;
+    transition-duration: 200ms;
+}
+.rbtn:hover{
+    transition-delay: 20ms;
+    transition: all;
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    background:linear-gradient(to bottom,rgba(187, 1, 1, 0.29),rgb(255, 255, 255,0.5));
+    box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -webkit-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -moz-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+
+}
+.cmnt{
+    background: rgba(250, 235, 215,0.5);
+    border-radius: 20rem;
+}

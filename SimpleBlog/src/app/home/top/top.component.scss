@@ -1,0 +1,13 @@
+.textboldi:hover{transition: all;
+    transition-duration: 300ms;
+    font-weight: bold;
+};
+.textboldi{
+    transition: all;
+    transition-duration: 300ms;
+
+}
+.green-div{
+    background: rgb(255,255,255);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(182,255,228,1) 100%);
+}

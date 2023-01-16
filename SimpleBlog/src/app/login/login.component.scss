@@ -1,0 +1,42 @@
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+.bg-image{
+    background-image: url("/assets/a.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+
+}
+.btns{
+    background: linear-gradient( to bottom left,rgba(246, 164, 83,0.5),rgb(213, 138, 253),rgba(182, 250, 153,0.5));
+    background-size: 200%;
+    background-position: 0%;
+    width: 70px;
+    transition: all;
+    transition-duration: 300ms;
+}
+.btns:hover{
+    transition: all;
+    transition-duration: 300ms;
+    background-position: 100%;
+    
+}
+
+.btns:hover{
+    position: 100% 0;
+}
+
+.formdiv{
+    left: 4%;
+    right: 4%;
+    top: 80px;
+    bottom: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 248, 255,.7);
+}

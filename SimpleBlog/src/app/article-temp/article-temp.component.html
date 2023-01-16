@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div  *ngIf="article" 
+     class="pt-5 container">
+    <div class="row">
+        <img src="http://localhost:8080/articles/getImage/{{article.idArticle}}"
+         onerror="this.src='/assets/placeholder.jpg'"  alt="...">
+    </div>
+    <div class="row w-auto text-center">
+    <div class="col">
+        <button (click)="editArticle()" class="btn me-3 ms-auto g-3 p-3">
+            Edit Article
+        </button>
+        <button (click)="deleteArticle()" class="rbtn ms-auto border-0 g-3 p-3">
+            Delete Article
+        </button>
+    </div>
+   </div>
+    <div class="row pt-3">
+        <h3>
+            {{article.title}}
+        </h3>
+    </div>
+    <div class="row pt-3">
+       <h5>
+           {{article.text}}
+       </h5>
+    </div>
+    <div class="row">
+        <textarea name="comment" class="border-0 rounded-2" id="comment" cols="30" rows="5" [(ngModel)]="commenttext" ></textarea>
+        <button (click)="subComment()" class="btncomment me-3 ms-auto g-3 p-3">
+            Create
+        </button>
+    </div>
+    <div *ngFor="let com of comments  " class=" m-5 cmnt ps-4 pb-3 pt-3" >
+        <div class="row rounded-2 border-1 border-opacity-10">
+            {{com.text}}
+        </div>
+    </div>
+    <div class="mt-5">
+
+    </div>
+
+</div>

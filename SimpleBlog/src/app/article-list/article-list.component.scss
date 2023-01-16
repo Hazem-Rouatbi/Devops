@@ -1,0 +1,62 @@
+.actgui:hover{
+    background: rgba(254, 77, 61, 0.5);
+}
+.actgui{
+    background:rgba(254, 77, 61, 0.2);
+    color: dimgrey;
+    transition: all;
+    transition-duration: 200ms;
+    transform: scale(1.1);  
+}
+.actcom:hover{
+    background:rgba(128, 255, 212, 0.5)
+}
+.actcom{
+    background:rgba(128, 255, 212, 0.3);
+    color:  dimgrey;
+    transition: all;
+    transition-duration: 200ms;
+    transform: scale(1.1);  
+}
+.discom{
+    background: rgba(103, 208, 173, 0.4);
+    color:rgb(183, 183, 183); 
+}
+.discom:hover{
+    background: rgba(128, 255, 212, 0.2);
+}
+.disgui{
+    background: rgba(254, 77, 61, 0.4);
+    color: rgb(212, 212, 212); 
+}
+.disgui:hover{
+    background: rgba(254, 77, 61, 0.2);
+}
+.bg-gui{
+    background-size: cover;
+    height:100%;
+    background:rgba(254, 77, 61, 0.1);
+}
+.bg-com{
+    height:100%;
+    background-size: cover;
+    background:rgba(128, 255, 212, 0.1)
+}
+.card{
+    background:rgba(255, 255, 255, 0.1);
+    transition: all;
+    transition-duration: 200ms;
+    transform: scale(1);
+    
+}
+.card:hover{
+    transition: all;
+    transition-duration: 200ms;
+    transform: scale(1.03);
+    box-shadow: 7px 4px 22px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 4px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 4px 22px 0px rgba(0,0,0,0.75);
+}
+.wid{
+    width: 250px;
+}

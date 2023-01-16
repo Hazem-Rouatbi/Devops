@@ -1,0 +1,75 @@
+
+.bg-gui{
+    background-size: cover;
+    height:100%;
+    background:rgba(254, 77, 61, 0.1);
+}
+.bg-com{
+    height:100%;
+    background-size: cover;
+    background:rgba(128, 255, 212, 0.1)
+}
+.pos{
+    right: 2vw;
+    top: 7vh;
+    left: 2vw;
+    bottom: 2vh;
+}
+.cust-btn{
+    background:linear-gradient(to bottom,rgba(168, 168, 168, 0.29),rgb(255, 255, 255,0.1));
+    width: 20em;
+    position: relative;
+    font-size: larger;
+    transition-delay: 20ms;
+    transition: all;
+    transition-duration: 200ms;
+}
+.cust-btn:hover{
+    transition-delay: 20ms;
+    transition: all;
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    background:linear-gradient(to bottom,rgba(168, 168, 168, 0.2),rgb(255, 255, 255,0.5));
+    box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -webkit-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+    -moz-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+}
+.bgop{
+    background: rgba(128, 255, 212, 0);
+}
+.hei{
+    height: 100;
+}
+.select{
+    background: rgba(255, 255, 255, 0.2);
+    color: dimgrey;
+}
+
+.act:hover{
+    background: rgba(50, 50, 50, 0.5);
+}
+
+.select:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+.act{
+    background:rgba(26, 25, 25, 0.6);
+    color: aliceblue; 
+    transition: all;
+    transition-duration: 200ms;
+    transform: scale(1.1);  
+}
+.zpad{
+    padding:0;
+}
+
+.textspace:focus
+{
+    box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+-webkit-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+-moz-box-shadow: -2px 3px 40px -10px rgba(0,0,0,0.69);
+}
+
+.textfont{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
