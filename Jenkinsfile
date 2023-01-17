@@ -17,22 +17,18 @@ pipeline{
         }
         stage("build maven w/o tests"){
                 steps {
-                dir('*/BlogBack'){
-                    sh 'mvn clean install -DskipTests .'
-                }
-        }
-        stage("build maven w/o tests"){
-                steps {
                 dir('**/BlogBack'){
                     sh 'mvn clean install -DskipTests .'
                 }
-        }
+                }
+                }
         stage("build angular"){
                 steps {
                 dir('**/SimpleBlog'){
                     sh 'npm install --save --legacy-peer-deps'
                     sh 'npm run build --prod'
                 }
+        }
         }
         stage("docker maven"){
                 steps{
