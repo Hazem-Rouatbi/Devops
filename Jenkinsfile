@@ -34,7 +34,7 @@ pipeline{
                 steps{
                     dir('BlogBack'){
                 sh 'docker build -t hazemr/blogback:$BUILD_ID .'
-                sh 'docker push hazemr/blogback:$BUILD_ID.'
+                sh 'docker push -a hazemr/blogback.'
                 }
             }
         }
@@ -42,7 +42,7 @@ pipeline{
                 steps{
                          dir('SimpleBlog'){
                 sh 'docker build -t hazemr/blogfront:$BUILD_ID .'
-                sh 'docker push hazemr/blogfront:$BUILD_ID'
+                sh 'docker push -a hazemr/blogfront'
                 }
             }
         }
