@@ -33,16 +33,16 @@ pipeline{
         stage("docker maven"){
                 steps{
                     dir('BlogBack'){
-                sh 'docker build -t hazemr/blogback:$BUILD_ID .'
-                sh 'docker push -a hazemr/blogback.'
+                sh 'docker build -t hazemr/blogback:$BUILD_ID -f Dockerfile .'
+                sh 'docker push hazemr/blogback:$BUILD_ID.'
                 }
             }
         }
         stage("docker angular"){
                 steps{
                          dir('SimpleBlog'){
-                sh 'docker build -t hazemr/blogfront:$BUILD_ID .'
-                sh 'docker push -a hazemr/blogfront'
+                sh 'docker build -t hazemr/blogfront:$BUILD_ID -f Dockerfile .'
+                sh 'docker push hazemr/blogfront:$BUILD_ID'
                 }
             }
         }
