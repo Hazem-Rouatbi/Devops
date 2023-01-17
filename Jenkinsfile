@@ -33,7 +33,13 @@ pipeline{
         stage("docker maven"){
                 steps{
                     dir('BlogBack'){
-                sh 'docker build -t hazemr/blogback:$BUILD_ID -f Dockerfile .'
+                sh 'docker push hazemr/blogback:$BUILD_ID.'
+                }
+            }
+        }
+        stage("docker maven pu"){
+                steps{
+                    dir('BlogBack'){
                 sh 'docker push hazemr/blogback:$BUILD_ID.'
                 }
             }
