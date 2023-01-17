@@ -18,7 +18,7 @@ pipeline{
         stage("build maven w/o tests"){
                 steps {
                 dir('BlogBack'){
-                    sh 'mvn clean install -DskipTests .'
+                    sh 'mvn package -DskipTests .'
                 }
                 }
                 }
