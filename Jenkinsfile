@@ -41,7 +41,7 @@ pipeline{
                 sh 'docker push  -t hazemr/blogBack:$BUILD_ID -f Dockerfile .'
                 }
             }
-            }
+        }
         stage("docker angular"){
                 steps{
                          dir('**/SimpleBlog'){
@@ -49,6 +49,7 @@ pipeline{
                 sh 'docker push  -t hazemr/blogFront:$BUILD_ID -f Dockerfile .'
                 }
             }
+        }
         stage("logout"){
                 steps{
                 sh 'docker logout'
