@@ -17,14 +17,14 @@ pipeline{
         }
         stage("build maven w/o tests"){
                 steps {
-                dir('**/BlogBack'){
+                dir('BlogBack'){
                     sh 'mvn clean install -DskipTests .'
                 }
                 }
                 }
         stage("build angular"){
                 steps {
-                dir('**/SimpleBlog'){
+                dir('SimpleBlog'){
                     sh 'npm install --save --legacy-peer-deps'
                     sh 'npm run build --prod'
                 }
@@ -32,7 +32,7 @@ pipeline{
         }
         stage("docker maven"){
                 steps{
-                    dir('**/BlogBack'){
+                    dir('BlogBack'){
                 sh 'docker build -t hazemr/blogBack:$BUILD_ID -f Dockerfile .'
                 sh 'docker push  -t hazemr/blogBack:$BUILD_ID -f Dockerfile .'
                 }
@@ -40,7 +40,7 @@ pipeline{
         }
         stage("docker angular"){
                 steps{
-                         dir('**/SimpleBlog'){
+                         dir('SimpleBlog'){
                 sh 'docker build -t hazemr/blogFront:$BUILD_ID -f Dockerfile .'
                 sh 'docker push  -t hazemr/blogFront:$BUILD_ID -f Dockerfile .'
                 }
