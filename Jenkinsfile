@@ -31,22 +31,18 @@ pipeline{
         }
         }
         stage("docker maven"){
+            agent any
                 steps{
                     dir('BlogBack'){
                 sh 'docker push hazemr/blogback:$BUILD_ID.'
-                }
-            }
-        }
-        stage("docker maven pu"){
-                steps{
-                    dir('BlogBack'){
                 sh 'docker push hazemr/blogback:$BUILD_ID.'
                 }
             }
         }
         stage("docker angular"){
+            agent any
                 steps{
-                         dir('SimpleBlog'){
+                    dir('SimpleBlog'){
                 sh 'docker build -t hazemr/blogfront:$BUILD_ID -f Dockerfile .'
                 sh 'docker push hazemr/blogfront:$BUILD_ID'
                 }
