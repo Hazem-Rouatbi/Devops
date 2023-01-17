@@ -1,3 +1,3 @@
 FROM nginx:alpine
 COPY /dist/test-app /usr/share/nginx/html
-EXPOSE 8O
+EXPOSE 80
