@@ -34,8 +34,8 @@ pipeline{
             agent any
                 steps{
                     dir('BlogBack'){
-                sh 'docker push hazemr/blogback:$BUILD_ID.'
-                sh 'docker push hazemr/blogback:$BUILD_ID.'
+                sh 'docker build -t hazemr/blogback:$BUILD_ID -f Dockerfile .'
+                sh 'docker push hazemr/blogback:$BUILD_ID'
                 }
             }
         }
