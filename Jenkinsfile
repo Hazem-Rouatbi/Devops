@@ -43,7 +43,6 @@ pipeline{
                 }
             }
         }
-
         stage("cleanup"){
                 steps{
                 sh 'docker rmi hazemr/blogfront:$BUILD_ID'
