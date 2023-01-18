@@ -24,7 +24,7 @@ pipeline{
                 }
         stage("build angular"){
             steps{
-                dir('simbleBlog')
+                dir('SimpleBlog')
                 {
                     sh 'npm install --save --legacy-peer-deps'
                     sh 'npm run build --prod'
