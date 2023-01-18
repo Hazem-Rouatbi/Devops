@@ -1,8 +1,4 @@
-FROM node:latest as node
-WORKDIR /app
-COPY . .
-RUN npm install --save --legacy-peer-deps
-RUN npm run build --prod
-
 FROM nginx:alpine
-COPY --from=node /app/dist/test-app /usr/share/nginx/html
+COPY /dist/test-app /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

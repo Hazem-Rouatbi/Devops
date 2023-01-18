@@ -22,6 +22,18 @@ pipeline{
                 }
                 }
                 }
+        stage("build angular"){
+            agent any
+            steps{
+                dir('SimpleBlog')
+                {
+                    sh 'npm install --save --legacy-peer-deps'
+                    sh 'npm run build --prod'
+                    sh 'docker build -t hazemr/blogfront:$BUILD_ID -f Dockerfile .'
+                    sh 'docker push hazemr/blogfront:$BUILD_ID'
+                }
+            }
+        }
         stage("docker maven"){
             agent any
                 steps{
@@ -31,15 +43,7 @@ pipeline{
                 }
             }
         }
-        stage("docker angular"){
-            agent any
-                steps{
-                    dir('SimpleBlog'){
-                sh 'docker build -t hazemr/blogfront:$BUILD_ID -f Dockerfile .'
-                sh 'docker push hazemr/blogfront:$BUILD_ID'
-                }
-            }
-        }
+
         stage("cleanup"){
                 steps{
                 sh 'docker rmi hazemr/blogfront:$BUILD_ID'
