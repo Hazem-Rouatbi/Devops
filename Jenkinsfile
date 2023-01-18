@@ -48,6 +48,12 @@ pipeline{
                 }
             }
         }
+        stage("cleanup"){
+                steps{
+                sh 'docker rmi hazemr/blogfront:$BUILD_ID'
+                sh 'docker rmi hazemr/blogback:$BUILD_ID'
+                }
+            }
         stage("logout"){
                 steps{
                 sh 'docker logout'
