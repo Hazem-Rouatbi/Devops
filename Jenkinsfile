@@ -22,15 +22,6 @@ pipeline{
                 }
                 }
                 }
-        stage("build angular"){
-            steps{
-                dir('SimpleBlog')
-                {
-                    sh 'npm install --save --legacy-peer-deps'
-                    sh 'npm run build --prod'
-                }
-            }
-        }
         stage("docker maven"){
             agent any
                 steps{
@@ -40,7 +31,6 @@ pipeline{
                 }
             }
         }
-
         stage("docker angular"){
             agent any
                 steps{
