@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: blogfront
+spec:
+  selector:
+    matchLabels:
+      app: blogfront
+  replicas: 5
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: blogfront
+    spec:
+      containers:
+        - name: blogfront
+          image: hazemr/front:f
+          ports:
+          - containerPort: 80
+ 
+            
+            
